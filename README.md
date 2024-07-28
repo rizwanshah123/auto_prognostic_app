@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automotive Prognostic Application</title>
-</head>
-<body>
-
 <h1>Automotive Prognostic Application</h1>
 <p>This project is an automotive prognostic application designed to monitor and predict vehicle conditions in real time. It leverages an OBDII interface to gather data from the vehicle, processes the data through a Flask backend, and provides both real-time monitoring and predictive analysis to a mobile app.</p>
 
@@ -51,7 +42,18 @@ python app.py
 
 <p><strong>Launch the Mobile App:</strong></p>
 <ul>
-    <li>Open the mobile app to view real-time data and predictions.</li>
+    <li>Navigate to the <code>auto_prognostic_app</code> folder:</li>
+    <pre><code>
+    cd auto_prognostic_app
+    </code></pre>
+    <li>Install the necessary Flutter packages:</li>
+    <pre><code>
+    flutter pub get
+    </code></pre>
+    <li>Run the Flutter app on your connected device or emulator:</li>
+    <pre><code>
+    flutter run
+    </code></pre>
 </ul>
 
 <h2>API Endpoints</h2>
@@ -73,6 +75,7 @@ python app.py
     <li><strong>requirements.txt:</strong> List of dependencies required for the project.</li>
     <li><strong>static/:</strong> Static files for the application.</li>
     <li><strong>templates/:</strong> HTML templates for the Flask application.</li>
+    <li><strong>auto_prognostic_app/:</strong> Folder containing the Flutter mobile app.</li>
 </ul>
 
 <h2>Contributing</h2>
@@ -83,6 +86,3 @@ python app.py
 
 <h2>Contact</h2>
 <p>For any questions or issues, please open an issue in this repository or contact me at <a href="mailto:shahrizwan403@gmail.com">shahrizwan403@gmail.com</a>.</p>
-
-</body>
-</html>
