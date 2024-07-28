@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OBDII Data</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var socket = io.connect('http://' + document.domain + ':' + location.port);
+            socket.on('connect', function() {
+                console.log('Connected to WebSocket');
+            });
+
+            socket.on('message', function(data) {
+                console.log('Received data: ', data);
+                document.getElementById('data').innerHTML = JSON.stringify(data);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>OBDII Data</h1>
+    <pre id="data"></pre>
+</body>
+</html>
